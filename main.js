@@ -21,3 +21,24 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
 
 })
+
+// Change Themes to dark
+const themeSelect = document.getElementById("themeSelect");
+themeSelect.addEventListener("change", function(){
+    const selected = themeSelect.value;
+
+    if(selected == "light"){
+        const b=document.querySelector("body");
+        b.style.backgroundColor="white";
+        const n=document.querySelector("header");
+        n.style.backgroundColor="#333";
+        n.style.color="#fff";
+    }
+    else{
+       const b=document.querySelector("body");
+       b.style.backgroundColor="#011e09";
+       const n=document.querySelector("header");
+       n.style.backgroundColor="#fff";
+       n.style.color="#333";
+    }
+});
