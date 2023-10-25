@@ -121,6 +121,8 @@ playButton.addEventListener("click", function () {
     movesLeftDisplay.innerHTML = `Moves Left: ${movesLeft}`;
 });
 
+
+
 // Change Themes to dark
 const themeSelect = document.getElementById("themeSelect");
 themeSelect.addEventListener("change", function () {

@@ -9,24 +9,27 @@
 </head>
 
 <body>
+    <!-- header the page -->
     <header>
         <h1>Contact Us</h1>
     </header>
 
+    <!-- Navigation Bar the page -->
     <nav id="nav">
         <ul>
             <li><a href="index.html" class="active" id="home">Home</a></li>
             <li><a href="#" id="gamesDropdown">Games ▼</a>
                 <div class="dropdown-content">
-                    <a href="number_guesser.html" id="game1">Number Guesser</a>  
+                    <a href="number_guesser.html" id="game1">Number Guesser</a>
                     <a href="rock_paper_scissors.html" id="game2">Rock Paper Scissors</a>
                     <a href="tic_tac_toe.html" id="game3">Tic Tac Toe</a>
-                    <a href="blackjack.html" id="game4">Blackjack</a>  
+                    <a href="blackjack.html" id="game4">Blackjack</a>
                 </div>
             </li>
             <li><a href="contact.html" id="contact">Contact</a></li>
             <li><a href="#" id="login">Login</a></li>
             <li><a href="#" id="leaderboard">Leaderboard</a></li>
+            <!--  Change the themes -->
             <select id="themeSelect">
                 <option value="light">Light Theme</option>
                 <option value="dark">Dark Theme</option>
@@ -34,14 +37,19 @@
         </ul>
     </nav>
 
+    <!--  Contact Page - main the page -->
     <main>
+        <!--  short description about the website -->
         <section class="about-section">
             <h2>About Us</h2> <br>
             <p>
                 Welcome to our Mini-Games Portal! We offer a variety of fun and entertaining games for you to play. <br>
-                Feel free to explore our games and don't hesitate to reach out to us if you have any questions or feedback.
+                Feel free to explore our games and don't hesitate to reach out to us if you have any questions or
+                feedback.
             </p>
         </section>
+
+        <!-- Input to contact us -->
         <section class="contact-form">
             <form id="contactForm" onsubmit="return validateForm()">
                 <label for="contactType">Contact Type:</label>
