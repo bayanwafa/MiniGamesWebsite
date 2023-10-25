@@ -14,7 +14,7 @@ header {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 1em;
+    padding: 1.5em;
 }
 
 nav {
@@ -37,7 +37,7 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
-    color: rgb(30, 23, 20);
+    color: orangered;
 }
 
 .currentpage {
@@ -118,8 +118,185 @@ h3 {
     border-radius: 4px;
 }
 
-/*tic_tac_toe styles*/
 
+/* Rock Paper Scissors styles */
+/* Game description */
+.game-description {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #d0cccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.game-description h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.game-description p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.game-description ol {
+    list-style-type: decimal;
+    margin-left: 20px;
+}
+
+.game-description ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.game-description li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Game display */
+.game-display {
+    text-align: center;
+}
+
+/* Game container */
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Game components */
+.game {
+    margin-top: 30px;
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #d0cccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.player-choice {
+    text-align: center;
+    margin: 10px;
+}
+
+.selection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+}
+
+.selection button {
+    margin: 0 20px;
+    padding: 25px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: rgb(41, 40, 40);
+    font-size: 33px;
+    color: orange;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container {
+    display: flex;
+}
+
+.container .section {
+    width: 350px;
+    margin: 20px;
+}
+
+.section .info {
+    background: rgb(10, 10, 10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+.info span,
+.info h3 {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0px 10px;
+    font-family: sans-serif;
+    color: white;
+}
+
+.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(41, 40, 40);
+    height: 220px;
+}
+
+.show i {
+    font-size: 100px;
+    color: orange;
+}
+
+.result p {
+    padding: 5px;
+    font-size: 20px;
+    color: #333;
+}
+
+
+/* Style play again button */
+.play-again {
+    display: block;
+    text-align: center;
+    margin: 3rem auto 1rem auto;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.play-again:hover {
+    background-color: #555;
+}
+
+
+
+/* Back Arrow styles */
+.back-arrow {
+    text-align: left;
+    margin: 20px;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+span {
+    font-size: 15px;
+    margin: 5px;
+}
+
+
+/*tic_tac_toe styles*/
 /* Style the game board */
 .game {
     grid-template-columns: repeat(3, 100px);
