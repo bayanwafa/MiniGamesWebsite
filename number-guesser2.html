@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+              background-color:burlywood/* Change background color to beige */
+        }
+        #result {
+            text-align: center;
+            color:brown;/* Change font color to dark yellow */
+        }
+        .winner-img {
+            max-width: 100%;
+        }
+        .winner {
+            background-image= none
+        }
+    </style>
+</head>
+<body>
+    <h1>Number Guessing Game</h1>
+    <p>Guess a number between 1 and 10:</p>
+    <input type="number" id="userGuess" min="1" max="10">
+    <button id="guessButton">Guess</button>
+    <p id="result"></p>
+
+    <div class="winner">
+        <img class="winner-img" src="winner.jpg" alt="Winner Image">
+    </div>
+
+    <script>
+        // Function to start the game
+        document.getElementById("guessButton").addEventListener("click", function () {
+            // Get a random number between 1 - 10 (inclusive)
+            const randomNumber = Math.floor(Math.random() * 10) + 1;
+
+            // Get the user's input
+            const guessedNumber = parseInt(document.getElementById("userGuess").value);
+
+            // Compare the number guessed to the random number
+            if (guessedNumber === randomNumber) {
+                document.getElementById("result").textContent = 'You win! The number is: ' + guessedNumber;
+                document.getElementById("result").style.color = 'darkorange'; // Change font color
+                document.querySelector(".winner-img").style.display = 'block'; // Show winner image
+            } else {
+                if (isNaN(guessedNumber) || guessedNumber < 1 || guessedNumber > 10) {
+                    document.getElementById("result").textContent = 'Invalid user input: ' + guessedNumber;
+                } else {
+                    if (guessedNumber > randomNumber) {
+                        document.getElementById("result").textContent = 'The guessed number is too high ' + guessedNumber + ' > ' + randomNumber;
+                    }
+                    if (guessedNumber < randomNumber) {
+                        document.getElementById("result").textContent = 'The guessed number is too low ' + guessedNumber + ' < ' + randomNumber;
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
