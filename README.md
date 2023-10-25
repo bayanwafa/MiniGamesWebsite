@@ -1,7 +1,7 @@
 # Project:  Mini-Games Portal
 
 
-## My group members names are:
+## Team member names:
 - Fatoon
 - Bayan
 - Helen
