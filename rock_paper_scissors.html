@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/e391ce7786.js" crossorigin="anonymous"></script>
+    <title>Rock Paper Scissors Game</title>
+</head>
+
+<body>
+    <header>
+        <h1>Rock Paper Scissors Game</h1>
+    </header>
+
+    <nav id="nav">
+        <ul>
+            <li><a href="index.html" class="active" id="home">Home</a></li>
+            <li><a href="#" id="gamesDropdown">Games ▼</a>
+                <div class="dropdown-content">
+                    <a href="number_guesser.html" id="game1">Number Guesser</a>
+                    <a href="rock_paper_scissors.html" id="game2">Rock Paper Scissors</a>
+                    <a href="tic_tac_toe.html" id="game3">Tic Tac Toe</a>
+                    <a href="hangman.html" id="game4">Hangman</a>
+                    <a href="blackjack.html" id="game4">Blackjack</a>
+                </div>
+            </li>
+            <li><a href="contact.html" id="contact">Contact</a></li>
+            <li><a href="#" id="login">Login</a></li>
+            <li><a href="#" id="leaderboard">Leaderboard</a></li>
+            <select id="themeSelect">
+                <option value="light">Light Theme</option>
+                <option value="dark">Dark Theme</option>
+            </select>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="game-description">
+            <h2>Rock Paper Scissors</h2>
+            <p>"Rock, Paper, Scissors" is a simple game played between a user and a computer. The game can be played 5
+                rounds. Here's a description of how the game works:</p>
+            <p>Gameplay:</p>
+            <ol>
+                <li>The user and the computer each make their choice by clicking on one of the three options: Rock,
+                    Paper, or Scissors.</li>
+                <li>The user's choice is registered and displayed on the screen.</li>
+                <li>The computer's choice, generated randomly, is also displayed on the screen.</li>
+                <li>The outcome of the round is determined based on the traditional rules:
+                    <ul>
+                        <li>Rock beats Scissors.</li>
+                        <li>Scissors beats Paper.</li>
+                        <li>Paper beats Rock.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+        <section class="game-display">
+            <div class="game-container">
+                <div class="game">
+                    <div class="player-choice">
+                        <h2>Your Choice</h2>
+                        <div class="selection">
+                            <button class="fas fa-hand-rock" id="rock"></button>
+                            <button class="fas fa-hand-paper" id="paper"></button>
+                            <button class="fas fa-hand-scissors" id="scissors"></button>
+                        </div>
+
+                        <div class="movesleft">Moves Left: 5 </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="section">
+                            <div class="info">
+                                <h3>You :</h3><span id="playerScore">0</span>
+                            </div>
+                            <div class="show">
+                                <i class="fas fa-hand-rock"></i>
+                            </div>
+                        </div>
+
+                        <div class="section">
+                            <div class="info">
+                                <h3>Computer :</h3><span id="computerScore">0</span>
+                            </div>
+                            <div class="show computer">
+                                <i class="fas fa-hand-scissors"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result">
+                        <h2>Result</h2>
+                        <p id="result-message">Make your choice...</p>
+                        <p id="game-status-message">Game in progress...</p>
+                    </div>
+                    <button class="play-again" id="play-again">Play Again</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="back-arrow">
+            <a href="index.html">
+                <button id="home-button">
+                    <span>&#129092; Home Page</span>
+                </button>
+            </a>
+        </div>
+    </main>
+
+    <script src="rock_paper_scissors.js"></script>
+</body>
+
+</html>
