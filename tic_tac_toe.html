@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mini-Games Portal</title>
+</head>
+
+<body>
+    <header>
+        <h1>Tic Tac Toe</h1>
+    </header>
+
+    <nav id="nav">
+        <ul>
+            <li><a href="index.html" class="active" id="home">Home</a></li>
+            <li><a href="#" id="gamesDropdown">Games ▼</a>
+                <div class="dropdown-content">
+                    <a href="number_guesser.html" id="game1">Number Guesser</a>  
+                    <a href="rock_paper_scissors.html" id="game2">Rock Paper Scissors</a>
+                    <a href="tic_tac_toe.html" id="game3">Tic Tac Toe</a>
+                    <a href="hangman.html" id="game4">Hangman</a>
+                    <a href="blackjack.html" id="game4">Blackjack</a>  
+                </div>
+            </li>
+            <li><a href="contact.html" id="contact">Contact</a></li>
+            <li><a href="#" id="login">Login</a></li>
+            <li><a href="#" id="leaderboard">Leaderboard</a></li>
+            <select id="themeSelect">
+                <option value="light">Light Theme</option>
+                <option value="dark">Dark Theme</option>
+            </select>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="game">
+            <div class="board">
+                <div class="square" onclick="makeMove(this)" data-index="0"></div>
+                <div class="square" onclick="makeMove(this)" data-index="1"></div>
+                <div class="square" onclick="makeMove(this)" data-index="2"></div>
+                <div class="square" onclick="makeMove(this)" data-index="3"></div>
+                <div class="square" onclick="makeMove(this)" data-index="4"></div>
+                <div class="square" onclick="makeMove(this)" data-index="5"></div>
+                <div class="square" onclick="makeMove(this)" data-index="6"></div>
+                <div class="square" onclick="makeMove(this)" data-index="7"></div>
+                <div class="square" onclick="makeMove(this)" data-index="8"></div>
+                <button onclick="restartGame()">Restart</button>
+
+            </div>
+        </div>
+        
+        <div class="count-bar">
+            <div class="win-count">
+                <span>You:</span>
+                <span id="player-count">0</span>
+            </div>
+            <div class="win-count">
+                <span>Computer:</span>
+                <span id="computer-count">0</span>
+            </div>
+            <div class="win-count">
+                <span>Tie:</span>
+                <span id="tie-count">0</span>
+            </div>
+        </div>
+    </main>
+    <script src="TicTac.js"></script>
+</body>
+</html>
