@@ -1,13 +1,13 @@
 # Project:  Mini-Games Portal
 
 
-## Team member names:
+<h2> Team member names:<h2/>
 - Fatoon
 - Bayan
 - Helen
 - Rana
 
-## Select games:
+<h2> Select games:<h2/>
 - Fatoon : Tic Tac Toe
 - Bayan : Rock Paper Scissors
 - Helen : Blackjack
