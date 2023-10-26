@@ -1,3 +1,6 @@
+// contact.js
+
+// Function to validate the contact form
 function validateForm() {
     // Basic email validation
     const emailInput = document.getElementById('email');
@@ -24,7 +27,8 @@ function validateForm() {
     return false;
 }
 
-//Show Thank You Message 
+
+// Function to display the thank you message
 function showThankYouMessage() {
     const contactForm = document.getElementById('contactForm');
     const thankYouMessage = document.getElementById('thankYouMessage');
@@ -32,6 +36,6 @@ function showThankYouMessage() {
 
     userName.textContent = document.getElementById('name').value;
 
-    contactForm.style.display = 'none';
-    thankYouMessage.style.display = 'block';
+    contactForm.style.display = 'none'; // Hide the contact form
+    thankYouMessage.style.display = 'block'; // Show the thank you message
 }

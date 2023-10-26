@@ -5,20 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Contact Us</title>
+    <title>Contact Us</title> <!-- Page title -->
 </head>
 
 <body>
-    <!-- header the page -->
+    <!-- Header section of the page -->
     <header>
-        <h1>Contact Us</h1>
+        <h1>Contact Us</h1> <!-- Heading for the Contact Us page -->
     </header>
 
-    <!-- Navigation Bar the page -->
+    <!-- Navigation Bar section -->
     <nav id="nav">
         <ul>
-            <li><a href="index.html" class="active" id="home">Home</a></li>
-            <li><a href="#" id="gamesDropdown">Games ▼</a>
+            <!-- Navigation links with IDs and a "Games" dropdown -->
+            <li><a href="index.html" class="active" id="home">Home</a></li> <!-- Home link with "active" class -->
+            <li><a href="#" id="gamesDropdown">Games ▼</a> <!-- Games dropdown link with arrow symbol -->
+                <!-- Submenu items for different games with links and IDs -->
                 <div class="dropdown-content">
                     <a href="number_guesser.html" id="game1">Number Guesser</a>
                     <a href="rock_paper_scissors.html" id="game2">Rock Paper Scissors</a>
@@ -26,11 +28,11 @@
                     <a href="blackjack.html" id="game4">Blackjack</a>
                 </div>
             </li>
-            <li><a href="contact.html" id="contact">Contact</a></li>
-            <li><a href="#" id="login">Login</a></li>
-            <li><a href="#" id="leaderboard">Leaderboard</a></li>
+            <li><a href="contact.html" id="contact">Contact</a></li> <!-- Contact link -->
+            <li><a href="#" id="login">Login</a></li> <!-- Login link -->
+            <li><a href="#" id="leaderboard">Leaderboard</a></li> <!-- Leaderboard link -->
 
-            <!--  Change the themes -->
+            <!-- Theme selection dropdown -->
             <select id="themeSelect">
                 <option value="light">Light Theme</option>
                 <option value="dark">Dark Theme</option>
@@ -38,9 +40,9 @@
         </ul>
     </nav>
 
-    <!--  Contact Page - main the page -->
+    <!-- Contact Page - main content section -->
     <main>
-        <!--  short description about the website -->
+        <!-- About Us section with a short description of the website -->
         <section class="about-section">
             <h2>About Us</h2> <br>
             <p>
@@ -50,15 +52,17 @@
             </p>
         </section>
 
-        <!-- Input to contact us -->
+        <!-- Contact form section for users to get in touch -->
         <section class="contact-form">
             <form id="contactForm" action="javascript:void(0);" onsubmit="return validateForm()">
+                <!-- Dropdown for selecting the type of contact (game request or bug report) -->
                 <label for="contactType">Contact Type:</label>
                 <select id="contactType" name="contactType">
                     <option value="gameRequest">New Game Request</option>
                     <option value="bugReport">Report a Bug</option>
                 </select>
 
+                <!-- Input fields for name, email, and message -->
                 <label for="name">Your Name:</label>
                 <input type="text" id="name" name="name" placeholder="Please enter your name..." pattern="[A-Za-z]+"
                     required>
@@ -70,9 +74,11 @@
                 <textarea id="message" name="message" rows="4" placeholder="Type your message here..."
                     required></textarea>
 
+                <!-- Submit button for the form -->
                 <button type="submit" value="Submit">Submit</button>
             </form>
 
+            <!-- Thank you message displayed after submission (initially hidden) -->
             <div id="thankYouMessage" style="display:none;">
                 <p>Thank you! <span id="userName"></span>, for your submission!</p>
             </div>
