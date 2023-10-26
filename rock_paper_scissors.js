@@ -124,9 +124,9 @@ playButton.addEventListener("click", function () {
 
 
 // Change Themes to dark
-const themeSelect = document.getElementById("themeSelect");
-themeSelect.addEventListener("change", function () {
-    const selected = themeSelect.value;
+const ThemeSelect = document.getElementById("themeSelect");
+ThemeSelect.addEventListener("change", function () {
+    const selected = ThemeSelect.value;
 
     if (selected == "light") {
         const b = document.querySelector("body");
