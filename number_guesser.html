@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Number Guesser Game</title>
+    </head>
+
+<body>
+    <header>
+        <h1>Number Guesser Game</h1>
+    </header>
+    <nav id="nav">
+        <ul>
+            <li><a href="index.html" class="active" id="home">Home</a></li>
+            <li><a href="#" id="gamesDropdown">Games ▼</a>
+                <div class="dropdown-content">
+                    <a href="number_guesser.html" id="game1">Number Guesser</a>  
+                    <a href="rock_paper_scissors.html" id="game2">Rock Paper Scissors</a>
+                    <a href="tic_tac_toe.html" id="game3">Tic Tac Toe</a>
+                    <a href="blackjack.html" id="game4">Blackjack</a>  
+                </div>
+            </li>
+            <li><a href="contact.html" id="contact">Contact</a></li>
+            <li><a href="#" id="login">Login</a></li>
+            <li><a href="#" id="leaderboard">Leaderboard</a></li>
+            <select id="themeSelect">
+                <option value="light">Light Theme</option>
+                <option value="dark">Dark Theme</option>
+            </select>
+            
+        </ul>
+    </nav>
+    <style>
+        /* Add CSS to style the elements within the game div */
+        .game p, .game input, .game button, .game p#result {
+            display: block;
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 10vh;
+            margin: 0;
+        }
+        #result {
+            text-align: center;
+        }
+        .winner-img {
+            max-width: 100%;
+        }
+        .winner {
+            background-image= none
+        }
+         }
+
+    </style>
+
+<div class="game">
+    <p>Guess a number between 1 and 10:</p>
+    <input type="number"id="userGuess"min="1" max="10">
+    <button id="guessButton">Guess</button>
+    <p id="result"></p>
+</div>
+
+       <script>
+        const themeSelect = document.getElementById("themeSelect");
+themeSelect.addEventListener("change", function(){
+    const selected = themeSelect.value;
+
+    if(selected == "light"){
+        const b=document.querySelector("body");
+        b.style.backgroundColor="white";
+        const n=document.querySelector("header");
+        n.style.backgroundColor="#333";
+        n.style.color="#fff";
+    }
+    else{
+       const b=document.querySelector("body");
+       b.style.backgroundColor="#011e09";
+       const n=document.querySelector("header");
+       n.style.backgroundColor="#fff";
+       n.style.color="#333";
+    }
+});
+        // Function to start the game
+        document.getElementById("guessButton").addEventListener("click", function () {
+            // Get a random number between 1 - 10 (inclusive)
+            const randomNumber = Math.floor(Math.random() * 10) + 1;
+
+            // Get the user's input
+            const guessedNumber = parseInt(document.getElementById("userGuess").value);
+
+            // Compare the number guessed to the random number
+            if (guessedNumber === randomNumber) {
+                document.getElementById("result").textContent = 'You win! The number is: ' + guessedNumber;
+                document.getElementById("result").style.color = 'darkorange'; 
+                document.querySelector(".winner-img").style.display = 'block';
+            } else {
+                if (isNaN(guessedNumber) || guessedNumber < 1 || guessedNumber > 10) {
+                    document.getElementById("result").textContent = 'Invalid user input: ' + guessedNumber;
+                } else {
+                    if (guessedNumber > randomNumber) {
+                        document.getElementById("result").textContent = 'The guessed number is too high ' + guessedNumber + ' > ' + randomNumber;
+                    }
+                    if (guessedNumber < randomNumber) {
+                        document.getElementById("result").textContent = 'The guessed number is too low ' + guessedNumber + ' < ' + randomNumber;
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
