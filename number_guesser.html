@@ -1,132 +1,64 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Number Guesser Game</title>
-    </head>
-   
+    <title>Number Guesser Game</title> <!-- Page title -->
+</head>
+
 
 <body>
+    <!-- Header section of the page -->
     <header>
-        <h1>Number Guesser Game</h1>
+        <h1>Number Guesser Game</h1> <!-- Heading for the Rock Paper Scissors game page -->
     </header>
+
+    <!-- Navigation Bar section -->
     <nav id="nav">
         <ul>
-            <li><a href="index.html" class="active" id="home">Home</a></li>
-            <li><a href="#" id="gamesDropdown">Games ▼</a>
+            <!-- Navigation links with IDs and a "Games" dropdown -->
+            <li><a href="index.html" class="active" id="home">Home</a></li> <!-- Home link with "active" class -->
+            <li><a href="#" id="gamesDropdown">Games ▼</a> <!-- Games dropdown link with arrow symbol -->
                 <div class="dropdown-content">
-                    <a href="number_guesser.html" id="game1">Number Guesser</a>  
+                    <!-- Submenu items for different games with links and IDs -->
+                    <a href="number_guesser.html" id="game1">Number Guesser</a>
                     <a href="rock_paper_scissors.html" id="game2">Rock Paper Scissors</a>
                     <a href="tic_tac_toe.html" id="game3">Tic Tac Toe</a>
-                    <a href="blackjack.html" id="game4">Blackjack</a>  
+                    <a href="blackjack.html" id="game4">Blackjack</a>
                 </div>
             </li>
-            <li><a href="contact.html" id="contact">Contact</a></li>
-            <li><a href="#" id="login">Login</a></li>
-            <li><a href="#" id="leaderboard">Leaderboard</a></li>
+            <li><a href="contact.html" id="contact">Contact</a></li> <!-- Contact link -->
+            <li><a href="#" id="login">Login</a></li> <!-- Login link -->
+            <li><a href="#" id="leaderboard">Leaderboard</a></li> <!-- Leaderboard link -->
+
+            <!-- Theme selection dropdown -->
             <select id="themeSelect">
                 <option value="light">Light Theme</option>
                 <option value="dark">Dark Theme</option>
             </select>
-            
         </ul>
     </nav>
-    <style>
-        .game1 {
-    margin :30px;
-    display: grid;
-    flex-direction: row;
-    align-items: center;
-    padding: 20px;
-    background-color: #d0cccc;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-        /* Add CSS to style the elements within the game div */
-        .game p, .game input, .game button, .game p#result {
-            display: grid;
-            text-align: center;
 
-            margin-bottom: 10px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 10vh;
-            margin: 3px;
-             text-align: center;
-        }
-        .winner-img {
-            max-width: 50%;
-        }
-    
-         
-
-    </style>
- <div class="game">
-    <p> Number Guesser is a game where the user and computer chooses a number between 1-10, 
-        then the user should try to guess the computers number</p>
+    <!-- Description about Number Guesser game -->
+    <div class="game-description">
+        <h2>Number Guesser</h2>
+        <p> Number Guesser is a game where the user and computer chooses a number between 1-10,
+            then the user should try to guess the computers number</p>
     </div>
-<div class="game">
-   
-    <p>Guess a number between 1 and 10:</p>
-    <input type="number"id="userGuess"min="1" max="10">
-</div>
-<div class="game1">
-    <button id="guessButton">Guess</button>
-    <p id="result"></p>
-</div>
-       <script>
-        const themeSelect = document.getElementById("themeSelect");
-themeSelect.addEventListener("change", function(){
-    const selected = themeSelect.value;
 
-    if(selected == "light"){
-        const b=document.querySelector("body");
-        b.style.backgroundColor="white";
-        const n=document.querySelector("header");
-        n.style.backgroundColor="#333";
-        n.style.color="#fff";
-    }
-    else{
-       const b=document.querySelector("body");
-       b.style.backgroundColor="#011e09";
-       const n=document.querySelector("header");
-       n.style.backgroundColor="#fff";
-       n.style.color="#333";
-    }
-});
-        // Function to start the game
-        document.getElementById("guessButton").addEventListener("click", function () {
-            // Get a random number between 1 - 10 (inclusive)
-            const randomNumber = Math.floor(Math.random() * 10) + 1;
+    <!-- Game section -->
+    <div class="gamedisplay">
+        <p>Guess a number between 1 and 10:</p>
+        <input type="number" id="userGuess" min="1" max="10">
+    </div>
+    <div class="game1">
+        <button id="guessButton">Guess</button>
+        <p id="result"></p>
+    </div>
 
-            // Get the user's input
-            const guessedNumber = parseInt(document.getElementById("userGuess").value);
-
-            // Compare the number guessed to the random number
-            if (guessedNumber === randomNumber) {
-                document.getElementById("result").textContent = 'You win! The number is: ' + guessedNumber;
-                document.getElementById("result").style.color = 'darkorange'; 
-                document.querySelector(".winner-img").style.display = 'block';
-            } else {
-                if (isNaN(guessedNumber) || guessedNumber < 1 || guessedNumber > 10) {
-                    document.getElementById("result").textContent = 'Invalid user input: ' + guessedNumber;
-                } else {
-                    if (guessedNumber > randomNumber) {
-                        document.getElementById("result").textContent = 'The guessed number is too high ' + guessedNumber + ' > ' + randomNumber;
-                    }
-                    if (guessedNumber < randomNumber) {
-                        document.getElementById("result").textContent = 'The guessed number is too low ' + guessedNumber + ' < ' + randomNumber;
-                    }
-                }
-            }
-        });
-    </script>
-    <!-- Back Arrow -->
+    <!-- Back Arrow to return to the home page -->
     <div class="back-arrow">
         <a href="index.html">
             <button id="home-button">
@@ -134,5 +66,9 @@ themeSelect.addEventListener("change", function(){
             </button>
         </a>
     </div>
+
+    <script src="main.js"></script>
+    <script src="number_guesser.js"></script>
 </body>
+
 </html>
