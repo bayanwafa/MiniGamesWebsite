@@ -180,19 +180,19 @@ h3 {
     background-color: #d0cccc;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Style the input field for number guessing */
-  #userGuess {
+}
+
+/* Style the input field for number guessing */
+#userGuess {
     padding: 5px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin: 10px;
-  }
-  
-  /* Style the "Guess" button */
-  #guessButton {
+}
+
+/* Style the "Guess" button */
+#guessButton {
     background-color: #333;
     color: #fff;
     font-size: 16px;
@@ -200,19 +200,19 @@ h3 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  /* Style the result message */
-  #result {
+}
+
+/* Style the result message */
+#result {
     font-size: 18px;
     margin: 10px;
-  }
-  
-  /* Style the game1 container (div containing the button and result) */
-  .game1 {
+}
+
+/* Style the game1 container (div containing the button and result) */
+.game1 {
     text-align: center;
-  }
-  
+}
+
 
 .winner-img {
     max-width: 50%;
