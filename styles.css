@@ -267,7 +267,7 @@ h3 {
     justify-content: center;
     align-items: center;
     padding: 20px;
-   background-color: #d0cccc;
+    background-color: #d0cccc;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -305,7 +305,7 @@ h3 {
     margin: 10px;
 }
 
-.section {  
+.section {
     width: 270px;
     text-align: center;
     margin: 10px;
