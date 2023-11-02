@@ -575,7 +575,9 @@ span {
     }
 
     .section {
-        max-width: 100px;
+        max-width: 200px;
+        display: flex;
+        flex-wrap: wrap;
         text-align: center;
         margin: 5px;
     }
