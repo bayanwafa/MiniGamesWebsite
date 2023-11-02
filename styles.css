@@ -329,7 +329,7 @@ h3 {
 }
 
 /* Styling for the player's and computer's choice display */
-.show, 
+.show,
 .show-computer {
     display: flex;
     align-items: center;
@@ -339,7 +339,7 @@ h3 {
 }
 
 /* Styling for the player's and computer's choice icon */
-.show i, 
+.show i,
 .show-computer i {
     font-size: 100px;
     color: orange;
@@ -572,5 +572,10 @@ span {
     .dropdown-content {
         position: static;
         display: none;
+    }
+
+    .section {
+        width: 100%;
+        margin: 0;
     }
 }
