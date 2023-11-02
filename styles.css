@@ -574,10 +574,14 @@ span {
         display: none;
     }
 
-    .section {
-        max-width: 200px;
+    .container {
         display: flex;
         flex-wrap: wrap;
+        margin: 5px;
+    }
+
+    .section {
+        max-width: 200px;
         text-align: center;
         margin: 5px;
     }
