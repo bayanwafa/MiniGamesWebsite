@@ -170,7 +170,7 @@ h3 {
 /* Number Guesser game styles */
 /* Styling for the game section */
 .game1 {
-    max-width: 800px;
+    max-width: 760px;
     margin: 0 auto;
     text-align: center;
     justify-content: center;
@@ -220,7 +220,7 @@ h3 {
 /* Styling for the game description section */
 .game-description {
     /* Set max width, background color, and border radius */
-    max-width: 800px;
+    max-width: 760px;
     margin: 0 auto;
     padding: 20px;
     background-color: #d0cccc;
@@ -243,6 +243,7 @@ h3 {
 }
 
 .game-description ol {
+    flex-wrap: wrap;
     list-style-type: decimal;
     margin-left: 20px;
 }
@@ -260,7 +261,7 @@ h3 {
 
 /* Styling for the game container and components  */
 .game-container {
-    max-width: 800px;
+    max-width: 760px;
     margin: 0 auto;
     text-align: center;
     display: grid;
@@ -478,7 +479,7 @@ span {
 /* contact styles */
 .about-section,
 .description-section {
-    max-width: 800px;
+    max-width: 760px;
     margin: 0 auto;
     padding: 20px;
     background-color: #d0cccc;
@@ -558,7 +559,7 @@ span {
 
 
 /* Media queries for responsiveness */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 760px) {
 
     /* Media query for smaller screens (e.g., mobile devices) */
     body {
