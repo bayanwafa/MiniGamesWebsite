@@ -1,4 +1,3 @@
-
 let computerSelection = 0;
 let totalNumber = 0;
 window.onload = StartOver;

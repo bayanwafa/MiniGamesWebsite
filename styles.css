@@ -449,6 +449,65 @@ h3 {
 }
 
 
+/* Black Jack game styles */
+/* Styling for the game description section */
+.gameDescriptionSection {
+    /* Set max width, background color, and border radius */
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #d0cccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the game description header */
+.gameDescriptionSection h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Styling for paragraphs in the game description */
+.gameDescriptionSection p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.gameDescriptionSection ol {
+    list-style-type: decimal;
+    margin: 20px;
+}
+
+.gameDescriptionSection ul {
+    list-style-type: disc;
+    margin: 20px;
+}
+
+.gameDescriptionSection li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Styling for the game container and components  */
+.gameContainer {
+    max-width: 768px;
+    margin: 20px auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #d0cccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.playerCards input {
+    margin: 5pt;
+}
 
 
 /* Styling for the Back Arrow section */
@@ -561,8 +620,10 @@ span {
 @media only screen and (max-width: 760px) {
 
     /* Media query for smaller screens (e.g., mobile devices) */
+    html,
     body {
-        margin-right: 10px;
+        max-width: 100%;
+        overflow-x: hidden;
     }
 
     nav ul {
@@ -590,66 +651,4 @@ span {
     .section {
         max-width: 100%;
     }
-}
-
-
-
-/* Black Jack game styles */
-/* Styling for the game description section */
-.gameDescriptionSection {
-    /* Set max width, background color, and border radius */
-    max-width: 768px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #d0cccc;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Styling for the game description header */
-.gameDescriptionSection h2 {
-    margin-bottom: 10px;
-    color: #333;
-}
-
-/* Styling for paragraphs in the game description */
-.gameDescriptionSection p {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 10px;
-}
-
-.gameDescriptionSection ol {
-    list-style-type: decimal;
-    margin-left: 20px;
-}
-
-.gameDescriptionSection ul {
-    list-style-type: disc;
-    margin-left: 20px;
-}
-
-.gameDescriptionSection li {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 5px;
-}
-
-/* Styling for the game container and components  */
-.gameContainer {
-    max-width: 768px;
-    margin: 20px auto;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background-color: #d0cccc;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.playerCards input {
-    margin: 5pt;
 }
