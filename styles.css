@@ -329,7 +329,8 @@ h3 {
 }
 
 /* Styling for the player's and computer's choice display */
-.show, .show-computer {
+.show, 
+.show-computer {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -338,7 +339,8 @@ h3 {
 }
 
 /* Styling for the player's and computer's choice icon */
-.show i, .show-computer i {
+.show i, 
+.show-computer i {
     font-size: 100px;
     color: orange;
 }
