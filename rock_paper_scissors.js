@@ -1,38 +1,49 @@
-// Selecting elements.
-const pScore = document.getElementById('playerScore');
-const cScore = document.getElementById('computerScore');
-const buttons = document.querySelectorAll('.selection button');
-const movesLeftDisplay = document.querySelector('.movesleft');
-const showIcon = document.querySelector('.show i');
-const computerShowIcon = document.querySelector('.computer i');
-const gameStatusMessage = document.getElementById('game-status-message');
-const playButton = document.getElementById("play-again");
+// rock_paper_scissors.js
+
+// Comments have been added to help understand the purpose of each section and the logic of the Rock Paper Scissors game.
+
+// Selecting elements from the HTML document.
+const pScore = document.getElementById('playerScore'); // Player's score display
+const cScore = document.getElementById('computerScore'); // Computer's score display
+const buttons = document.querySelectorAll('.selection button'); // Rock, Paper, and Scissors buttons
+const movesLeftDisplay = document.querySelector('.movesleft'); // Display for remaining moves
+const showIcon = document.querySelector('.show i'); // Player's chosen icon display
+const computerShowIcon = document.querySelector('.show-computer i'); // Computer's chosen icon display
+const gameStatusMessage = document.getElementById('game-status-message'); // Game status message
+const playButton = document.getElementById("play-again"); // Play Again button
 
 
-// Storing the scores.
+// Storing scores and moves left.
+// Initialize computer's score and player's score
+// Number of moves allowed in the game
 let computerScore = 1;
 let playerScore = 1;
 let movesLeft = 5;
 
-
+// Class names for Rock, Paper, and Scissors icons.
 const rockIcon = "fas fa-hand-rock";
 const paperIcon = "fas fa-hand-paper";
 const scissorsIcon = "fas fa-hand-scissors";
 
+// Array of class names for random computer choices.
 const randomClasses = [rockIcon, paperIcon, scissorsIcon];
+
 const text = document.getElementById('result-message');
 
 
+// Function to display a tie result.
 const tie = () => {
     text.innerHTML = "It's a Tie ! ";
     text.style.color = 'grey';
 }
 
+// Function to display a win result.
 const win = () => {
     text.innerHTML = "You won ! ";
     text.style.color = 'green';
 }
 
+// Function to display a lose result.
 const lose = () => {
     text.innerHTML = "Computer won ! ";
     text.style.color = 'red';
@@ -43,6 +54,7 @@ const lose = () => {
 const game = () => {
     buttons.forEach(btn => {
         btn.addEventListener('click', (e) => {
+            // Logic for gameplay and determining the winner.
             if (movesLeft > 0) {
                 // Random rock paper scissor for the computer and clicked ones for the player
                 let clickedBtn = e.target.className;
@@ -88,6 +100,7 @@ const game = () => {
                 movesLeftDisplay.textContent = `Moves Left: ${movesLeft}`;
             }
 
+            // Display game over message and result.
             if (movesLeft == 0) {
                 if (playerScore > computerScore) {
                     gameStatusMessage.textContent = 'Game Over!! You win the game!';
@@ -111,6 +124,7 @@ game();
 
 // Function to reset the game
 playButton.addEventListener("click", function () {
+    // Reset scores, moves left, and message to restart the game.
     playerScore = 1;
     computerScore = 1;
     movesLeft = 5;
@@ -120,27 +134,3 @@ playButton.addEventListener("click", function () {
     gameStatusMessage.innerHTML = 'Game in progress..';
     movesLeftDisplay.innerHTML = `Moves Left: ${movesLeft}`;
 });
-
-
-
-// Change Themes to dark
-const themeSelect = document.getElementById("themeSelect");
-themeSelect.addEventListener("change", function () {
-    const selected = themeSelect.value;
-
-    if (selected == "light") {
-        const b = document.querySelector("body");
-        b.style.backgroundColor = "white";
-        const n = document.querySelector("header");
-        n.style.backgroundColor = "#333";
-        n.style.color = "#fff";
-    }
-    else {
-        const b = document.querySelector("body");
-        b.style.backgroundColor = "#011e09";
-        const n = document.querySelector("header");
-        n.style.backgroundColor = "#fff";
-        n.style.color = "#333";
-    }
-});
-

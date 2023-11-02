@@ -3,10 +3,11 @@
 //Delay JavaScript execution until after all HTML and CSS is rendered.
 document.addEventListener("DOMContentLoaded", function (event) {
     //This runs every time the page loads, doesn't need to be called as a function
-    var filename = location.pathname.split('/').pop();
-    //If it's nothing, or index.html, or index.htm, it's the home page.
+    var filename = location.pathname.split('/').pop(); // Extract the filename from the URL path
+
+    // Check if it's the home page or one of its variants
     if (filename == '' || filename == 'index.html' || filename == 'index.htm') {
-        document.getElementById('home').className = "currentpage";
+        document.getElementById('home').className = "currentpage"; // Highlight the "Home" link as the current page
     }
     else {
         //Otherwise loop through the rest of the links and apply highligh CSS style to
@@ -15,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         var links = nav.getElementsByTagName('a');
         for (i = 1; i < links.length; i++) {
             if (links[i].getAttribute('href').indexOf(filename) > -1) {
-                links[i].className = "currentpage";
+                links[i].className = "currentpage"; // Highlight the current page link
             }
         }
     }
@@ -23,22 +24,16 @@ document.addEventListener("DOMContentLoaded", function (event) {
 })
 
 // Change Themes to dark
-const themeSelect = document.getElementById("themeSelect");
-themeSelect.addEventListener("change", function () {
-    const selected = themeSelect.value;
+const ThemeSelect = document.getElementById("themeSelect");
+ThemeSelect.addEventListener("change", function () {
+    const selected = ThemeSelect.value;
 
     if (selected == "light") {
-        const b = document.querySelector("body");
-        b.style.backgroundColor = "white";
-        const n = document.querySelector("header");
-        n.style.backgroundColor = "#333";
-        n.style.color = "#fff";
+        // Remove the "dark-theme" class to switch to the light theme
+        document.body.classList.remove("dark-theme");
     }
     else {
-        const b = document.querySelector("body");
-        b.style.backgroundColor = "#011e09";
-        const n = document.querySelector("header");
-        n.style.backgroundColor = "#fff";
-        n.style.color = "#333";
+        // Add the "dark-theme" class to switch to the dark theme
+        document.body.classList.add("dark-theme");
     }
 });
