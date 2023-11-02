@@ -338,7 +338,7 @@ h3 {
 }
 
 /* Styling for X and O symbols */
-.show i,
+.show i, 
 .show-computer i {
     font-size: 100px;
     color: orange;
