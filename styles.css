@@ -244,12 +244,12 @@ h3 {
 
 .game-description ol {
     list-style-type: decimal;
-    margin-left: 20px;
+    margin: 20px;
 }
 
 .game-description ul {
     list-style-type: disc;
-    margin-left: 20px;
+    margin: 20px;
 }
 
 .game-description li {
