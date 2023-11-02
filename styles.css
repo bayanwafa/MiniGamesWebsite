@@ -563,8 +563,7 @@ span {
     /* Media query for smaller screens (e.g., mobile devices) */
     html,
     body {
-        width: 100%;
-        margin: 0;
+        max-width: 100%;
         overflow-x: hidden;
     }
 
