@@ -306,7 +306,7 @@ h3 {
 }
 
 .section {
-    width: 270px;
+    width: 250px;
     text-align: center;
     margin: 10px;
 }
@@ -328,8 +328,8 @@ h3 {
     color: white;
 }
 
-.show,
-.show-computer {
+/* Styling for the player's and computer's choice display */
+.show, .show-computer {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -337,9 +337,8 @@ h3 {
     padding: 20px;
 }
 
-/* Styling for X and O symbols */
-.show i, 
-.show-computer i {
+/* Styling for the player's and computer's choice icon */
+.show i, .show-computer i {
     font-size: 100px;
     color: orange;
 }
