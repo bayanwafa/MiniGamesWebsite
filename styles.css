@@ -652,9 +652,4 @@ span {
     .section {
         max-width: 100%;
     }
-
-    .square {
-        max-width: 100%;
-        max-height: 100%;
-    }
 }
