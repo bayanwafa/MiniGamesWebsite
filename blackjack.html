@@ -38,12 +38,12 @@
             </select>
         </ul>
     </nav>
-    <main>
-        <!-- Game section -->
-        <!-- Description about the Black Jack game -->
-        <section class="gameDescriptionSection">
-            <h2>Black Jack</h2>
-            <!--
+
+    <!-- Game section -->
+    <!-- Description about the Black Jack game -->
+    <section class="gameDescriptionSection">
+        <h2>Black Jack</h2>
+        <!--
             // the computer will start with a random number between 1 and 5.
             // the user will be asked for number between 1 and 5. Make this into a function and check if the user input is valid 
         
@@ -54,57 +54,58 @@
                 // A function that is responsible for printing a winning or losing message to the console depending on whether the user won or not
         
             // write pseudocode in the comments of your javascript file. Convert your pseudocode into real code
-            --> 
-            <p>In this simplified version of Black Jack, the goal for the user is to try to get 21 exactly. If their total is above 21, they lose.</p>
-            <!-- List of game instructions -->
-            <h3>Game steps:</h3>
-            <ol>
-                <li>the computer will start with a random number between 1 and 5.</li>
-                <li>the user will be asked for number between 1 and 5.</li>
-                <li>the computer will add the user's number to its random number. </li>
-                <li>the web app will check if the total value is 21. these steps will keep repeating until the total is 21 or above. </li>
-            </ol>
-        </section>
+            -->
+        <p>In this simplified version of Black Jack, the goal for the user is to try to get 21 exactly. If their
+            total is above 21, they lose.</p>
+        <!-- List of game instructions -->
+        <h3>Game steps:</h3>
+        <ol>
+            <li>the computer will start with a random number between 1 and 5.</li>
+            <li>the user will be asked for number between 1 and 5.</li>
+            <li>the computer will add the user's number to its random number. </li>
+            <li>the web app will check if the total value is 21. these steps will keep repeating until the total is
+                21 or above. </li>
+        </ol>
+    </section>
 
 
-        <!-- Game display -->
-        <div class="gameContainer">
-            <!-- Player's choice and game elements -->
-            <div class="playerCards">
-                <input type="number" id="userSelectedNumber" min="1" max="5">
-                <button id="btnUserEntry" >Enter a number</button>
-        
-                <h2>Or choose a card</h2>
-                
-                    <input type="image" id="image1"  src="img/Ace.png" onclick="AddUserSelection(1)" />
-                    <input type="image" id="image2" src="img/Number2.png"  onclick="AddUserSelection(2)" />
-                    <input type="image" id="image3" src="img/Number3.png"  onclick="AddUserSelection(3)" />
-                    <input type="image" id="image4" src="img/Number4.png"  onclick="AddUserSelection(4)" />
-                    <input type="image" id="image5" src="img/Number5.png"  onclick="AddUserSelection(5)" />
-                
+    <!-- Game display -->
+    <div class="gameContainer">
+        <!-- Player's choice and game elements -->
+        <div class="playerCards">
+            <input type="number" id="userSelectedNumber" min="1" max="5">
+            <button id="btnUserEntry">Enter a number</button>
 
-            </div>
+            <h2>Or choose a card</h2>
 
-            <!-- Score Display -->
-            <div class="scoreContainer">
-                <p id="result"></p>
-            </div>
+            <input type="image" id="image1" src="img/Ace.png" onclick="AddUserSelection(1)" />
+            <input type="image" id="image2" src="img/Number2.png" onclick="AddUserSelection(2)" />
+            <input type="image" id="image3" src="img/Number3.png" onclick="AddUserSelection(3)" />
+            <input type="image" id="image4" src="img/Number4.png" onclick="AddUserSelection(4)" />
+            <input type="image" id="image5" src="img/Number5.png" onclick="AddUserSelection(5)" />
 
-            <!-- Restart game -->
-            <button class="startOver" id="startOver" onclick="StartOver()">Start Over</button>
-        </div>
+
         </div>
 
-
-        <!-- Back Arrow to return to the home page -->
-        <div class="back-arrow">
-            <a href="index.html">
-                <button id="home-button">
-                    <span>&#129092; Home Page</span>
-                </button>
-            </a>
+        <!-- Score Display -->
+        <div class="scoreContainer">
+            <p id="result"></p>
         </div>
-    </main>
+
+        <!-- Restart game -->
+        <button class="startOver" id="startOver" onclick="StartOver()">Start Over</button>
+    </div>
+    </div>
+
+    <!-- Back Arrow to return to the home page -->
+    <div class="back-arrow">
+        <a href="index.html">
+            <button id="home-button">
+                <span>&#129092; Home Page</span>
+            </button>
+        </a>
+    </div>
+
     <script src="main.js"></script>
     <script src="blackJack.js"></script>
 </body>
