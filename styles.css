@@ -561,8 +561,10 @@ span {
 @media only screen and (max-width: 760px) {
 
     /* Media query for smaller screens (e.g., mobile devices) */
+    html,
     body {
-        margin-right: 10px;
+        margin: 10px;
+        overflow-x: hidden;
     }
 
     nav ul {
@@ -577,14 +579,6 @@ span {
     .dropdown-content {
         position: static;
         display: none;
-    }
-
-    .game-description {
-        padding: 10px;
-    }
-
-    .game-container {
-        padding: 10px;
     }
 
     .section {
