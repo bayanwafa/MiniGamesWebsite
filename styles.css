@@ -379,22 +379,24 @@ h3 {
 /* Tic Tac Toe game styles*/
 /* Style the game board */
 .game {
-    grid-template-columns: repeat(3, 100px);
-    grid-gap: 10px;
-    background-color: #d0cccc;
-    border: 5px solid #444;
-    padding: 40px;
-    margin: 20px auto;
-    display: flex;
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+    display: grid;
+    flex-direction: column;
     justify-content: center;
-    /* Center horizontally */
+    align-items: center;
+    padding: 20px;
+    background-color: #d0cccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .square {
     width: 100px;
     height: 100px;
     text-align: center;
-    font-size: 36px;
+    font-size: 60px;
     line-height: 100px;
     cursor: pointer;
     background-color: #fff;
@@ -419,6 +421,10 @@ h3 {
     height: 30px;
     border-radius: 3px;
     cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Additional styles can be added based on your design preferences */
@@ -434,12 +440,15 @@ h3 {
 
 /* Example styles for the count-bar */
 .count-bar {
+    max-width: 760px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-around;
     padding: 10px;
     background-color: #333;
     color: #fff;
     font-size: 20px;
+    margin-top: 20px;
 }
 
 .win-count {
@@ -453,7 +462,7 @@ h3 {
 /* Styling for the game description section */
 .gameDescriptionSection {
     /* Set max width, background color, and border radius */
-    max-width: 768px;
+    max-width: 760px;
     margin: 0 auto;
     padding: 20px;
     background-color: #d0cccc;
@@ -492,7 +501,7 @@ h3 {
 
 /* Styling for the game container and components  */
 .gameContainer {
-    max-width: 768px;
+    max-width: 760px;
     margin: 20px auto;
     text-align: center;
     display: flex;
@@ -640,15 +649,12 @@ span {
         display: none;
     }
 
-    .game-description {
-        padding: 10px;
-    }
-
-    .game-container {
-        padding: 10px;
-    }
-
     .section {
         max-width: 100%;
+    }
+
+    .square {
+        max-width: 100%;
+        max-height: 100%;
     }
 }
