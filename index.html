@@ -5,31 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Mini-Games Portal</title>
+    <title>Mini-Games Portal</title> <!-- Setting the page title -->
 </head>
 
+<!-- The main content of the webpage-->
+
 <body>
-    <!-- header the page -->
+    <!-- Header section of the page -->
     <header>
-        <h1>Mini-Games Portal</h1>
+        <h1>Mini-Games Portal</h1> <!-- Page title -->
     </header>
 
-    <!-- Navigation Bar the page -->
+    <!-- Navigation Bar section -->
     <nav id="nav">
         <ul>
-            <li><a href="index.html" class="active" id="home">Home</a></li>
-            <li><a href="#" id="gamesDropdown">Games ▼</a>
-                <div class="dropdown-content">
+            <li><a href="index.html" class="active" id="home">Home</a></li> <!-- Home link with "active" class -->
+            <li><a href="#" id="gamesDropdown">Games ▼</a> <!-- Games dropdown link with arrow symbol -->
+                <div class="dropdown-content"> <!-- Container for the dropdown menu items -->
+                    <!-- Submenu items for different games with links and IDs -->
                     <a href="number_guesser.html" id="game1">Number Guesser</a>
                     <a href="rock_paper_scissors.html" id="game2">Rock Paper Scissors</a>
                     <a href="tic_tac_toe.html" id="game3">Tic Tac Toe</a>
                     <a href="blackjack.html" id="game4">Blackjack</a>
                 </div>
             </li>
-            <li><a href="contact.html" id="contact">Contact</a></li>
-            <li><a href="#" id="login">Login</a></li>
-            <li><a href="#" id="leaderboard">Leaderboard</a></li>
-            <!--  Change the themes -->
+            <li><a href="contact.html" id="contact">Contact</a></li> <!-- Contact link -->
+            <li><a href="#" id="login">Login</a></li> <!-- Login link -->
+            <li><a href="#" id="leaderboard">Leaderboard</a></li> <!-- Leaderboard link -->
+            <!-- Dropdown to change the theme -->
             <select id="themeSelect">
                 <option value="light">Light Theme</option>
                 <option value="dark">Dark Theme</option>
@@ -37,13 +40,14 @@
         </ul>
     </nav>
 
-    <!--  Game Thumbnails - main the page -->
+    <!-- Game Thumbnails section -->
     <main>
         <section class="game-thumbnails">
+            <!-- Game thumbnail for Number Guesser -->
             <div class="game-thumbnail">
-                <img src="img/number_guesser.jpg" alt="Number Guesser">
-                <h3>Number Guesser</h3>
-                <a href="number_guesser.html">Play Now</a>
+                <img src="img/number_guesser.jpg" alt="Number Guesser"> <!-- Game image -->
+                <h3>Number Guesser</h3> <!-- Game title -->
+                <a href="number_guesser.html">Play Now</a> <!-- Link to play the game -->
             </div>
 
             <div class="game-thumbnail">

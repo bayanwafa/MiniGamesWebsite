@@ -1,6 +1,14 @@
-# MiniGamesWebsite
-My group name is Mini games 
-My name is Fatoon 
-Bayan 
-Helen 
-Rana
+# Project:  Mini-Games Portal
+
+
+## Team member names:
+- Fatoon
+- Bayan
+- Helen
+- Rana
+
+## Select games:
+- Fatoon : Tic Tac Toe
+- Bayan : Rock Paper Scissors
+- Helen : Blackjack
+- Rana : Number Guesser

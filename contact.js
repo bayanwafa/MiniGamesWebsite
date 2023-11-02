@@ -1,8 +1,11 @@
+// contact.js
+
+// Function to validate the contact form
 function validateForm() {
     // Basic email validation
     const emailInput = document.getElementById('email');
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    
+
     if (!emailRegex.test(emailInput.value)) {
         emailInput.setCustomValidity('Please enter a valid email address.');
         return false;
@@ -24,34 +27,15 @@ function validateForm() {
     return false;
 }
 
+
+// Function to display the thank you message
 function showThankYouMessage() {
     const contactForm = document.getElementById('contactForm');
     const thankYouMessage = document.getElementById('thankYouMessage');
     const userName = document.getElementById('userName');
-    
+
     userName.textContent = document.getElementById('name').value;
-    
-    contactForm.style.display = 'none';
-    thankYouMessage.style.display = 'block';
+
+    contactForm.style.display = 'none'; // Hide the contact form
+    thankYouMessage.style.display = 'block'; // Show the thank you message
 }
-
-// Change Themes to dark
-const themeSelect = document.getElementById("themeSelect");
-themeSelect.addEventListener("change", function(){
-    const selected = themeSelect.value;
-
-    if(selected == "light"){
-        const b=document.querySelector("body");
-        b.style.backgroundColor="white";
-        const n=document.querySelector("header");
-        n.style.backgroundColor="#333";
-        n.style.color="#fff";
-    }
-    else{
-       const b=document.querySelector("body");
-       b.style.backgroundColor="#011e09";
-       const n=document.querySelector("header");
-       n.style.backgroundColor="#fff";
-       n.style.color="#333";
-    }
-});
