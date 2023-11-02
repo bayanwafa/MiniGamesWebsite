@@ -8,7 +8,7 @@ const cScore = document.getElementById('computerScore'); // Computer's score dis
 const buttons = document.querySelectorAll('.selection button'); // Rock, Paper, and Scissors buttons
 const movesLeftDisplay = document.querySelector('.movesleft'); // Display for remaining moves
 const showIcon = document.querySelector('.show i'); // Player's chosen icon display
-const computerShowIcon = document.querySelector('.computer i'); // Computer's chosen icon display
+const computerShowIcon = document.querySelector('.show-computer i'); // Computer's chosen icon display
 const gameStatusMessage = document.getElementById('game-status-message'); // Game status message
 const playButton = document.getElementById("play-again"); // Play Again button
 
