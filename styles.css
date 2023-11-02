@@ -562,7 +562,7 @@ span {
 
     /* Media query for smaller screens (e.g., mobile devices) */
     body {
-        margin: 0;
+        margin-right: 0;
     }
 
     nav ul {
