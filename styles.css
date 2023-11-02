@@ -581,8 +581,8 @@ span {
     }
 
     .section {
-        max-width: 100%;
+        max-width: 90%;
         text-align: center;
-        margin: 10px 0;
+        margin: 5px 0;
     }
 }
