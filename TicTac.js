@@ -58,12 +58,64 @@ function updateWinCount(player) {
 }
 
 function restartGame() {
+    board = Array(9).fill("");
     currentPlayer = "X";
     gameOver = false;
-    board.fill("");
     const squares = document.querySelectorAll(".square");
     squares.forEach((square) => {
         square.textContent = "";
         square.classList.remove("X", "O");
     });
 }
+
+// // scores for you and the computer
+// let playerScore = 0;
+// let computerScore = 0;
+// // Initialize a counter to keep track of the number of games played
+// let gameCount = 0;
+
+// // Function to update scores and check for game result
+// function updateScores(winner) {
+//     if (winner === "you") {
+//         // If you won a game, increase your score
+//         playerScore++;
+//     } else if (winner === "computer") {
+//         // If the computer won a game, increase your score
+//         computerScore++;
+//     }
+
+//     // increase the game count for each game played
+//     gameCount++;
+
+//     // Check for the specified conditions
+//     if (playerScore == 2) {
+//       console.log("You're the winner!!");
+//         restartGame();
+//     } else if (computerScore == 2) {
+//         console.log("Computer is the winner!!");
+//         restartGame();
+//     } else if (playerScore == 1 && computerCount == 1) {
+//         console.log("It's a tie!!")
+//         restartGame();
+//     }
+
+// }
+
+// // Function to display messages in the .count-bar element
+// function restartGameTic() {
+//     playerScore = 0;
+//     computerScore = 0;
+//     gameCount = 0;
+// }
+
+// // Function to display messages in the .count-bar element
+// function displayMessage(message) {
+//     const countBar = document.querySelector('.count-bar');
+//     querySelector.textContent = message;
+// }
+
+// // call updateScores with the winner
+// updateScores("You");
+// updateScores("computer");
+// updateScores("you"); // You won another game
+

@@ -374,9 +374,47 @@ h3 {
     background-color: #555;
 }
 
-
-
 /* Tic Tac Toe game styles*/
+/* Game description */
+.description-section {
+    max-width: 760px;
+    /* Adjust this value to make the box wider */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #d0cccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.description-section h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.description-section p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 7px;
+}
+
+.description-section ol {
+    list-style-type: circle;
+    margin-left: 20px;
+}
+
+.description-section li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.description-section ul {
+    /* list-style-type:upper-roman;  why it doesn't work if i change it?*/
+    color: #555;
+    margin-left: 20px;
+}
+
 /* Style the game board */
 .game {
     max-width: 760px;
@@ -392,12 +430,25 @@ h3 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Additional styles can be added based on your design preferences */
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+}
+
+/* Style the individual squares within the game board */
 .square {
     width: 100px;
-    height: 100px;
+    height: 120px;
     text-align: center;
     font-size: 60px;
-    line-height: 100px;
+    /* Vertically center the text content within the square */
+    line-height: 120px;
     cursor: pointer;
     background-color: #fff;
     border: 1px solid #444;
@@ -415,7 +466,7 @@ h3 {
 /* Style the restart button */
 .game .board button {
     position: absolute;
-    top: 360px;
+    top: 420px;
     left: 140px;
     width: 100px;
     height: 30px;
@@ -427,18 +478,19 @@ h3 {
     justify-content: center;
 }
 
-/* Additional styles can be added based on your design preferences */
-
-.board {
-    display: grid;
-    grid-template-columns: repeat(3, 100px);
-    grid-gap: 10px;
-    padding: 30px;
-    text-align: center;
-    position: relative;
+/* Styling for the "Moves Left" button */
+.movesleftTic {
+    color: rgb(247, 34, 14);
+    /* padding: 10px 10px; */
+    margin: 10px auto;
+    /* Center horizontally */
+    display: block;
+    /* Make it a block-level element */
+    width: max-content;
+    /* Adjust the width as needed */
 }
 
-/* Example styles for the count-bar */
+/* Styles for the count-bar */
 .count-bar {
     max-width: 760px;
     margin: 0 auto;
@@ -543,11 +595,9 @@ span {
     margin: 5px;
 }
 
-
-
+/* CONTACT PAGE */
 /* contact styles */
-.about-section,
-.description-section {
+.about-section {
     max-width: 760px;
     margin: 0 auto;
     padding: 20px;
@@ -557,13 +607,11 @@ span {
     margin-bottom: 30px;
 }
 
-.about-section h2,
-.description-section h2 {
+.about-section h2 {
     color: #333;
 }
 
-.about-section p,
-.description-section p {
+.about-section p {
     font-size: 16px;
     line-height: 1.6;
     color: #555;
@@ -654,4 +702,14 @@ span {
     .section {
         max-width: 100%;
     }
+
+    /* .game {
+        max-width: 760px;
+        margin: 0 auto;
+    }
+
+    .square {
+        max-width: 80%;
+        margin: 0 auto;
+    } */
 }
