@@ -458,6 +458,7 @@ h3 {
 }
 
 
+
 /* Black Jack game styles */
 /* Styling for the game description section */
 .gameDescriptionSection {
@@ -519,6 +520,7 @@ h3 {
 }
 
 
+
 /* Styling for the Back Arrow section */
 .back-arrow {
     text-align: left;
@@ -568,7 +570,7 @@ span {
 }
 
 .contact-form {
-    max-width: 600px;
+    max-width: 760px;
     margin: 0 auto;
     padding: 20px;
     background-color: #d0cccc;
