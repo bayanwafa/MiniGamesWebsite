@@ -10,9 +10,11 @@
 
 <body>
     <header>
+        <!-- Header section of the page -->
         <h1>Tic Tac Toe Game</h1>
     </header>
 
+    <!--Navigation bar with dropdown list of the games-->
     <nav id="nav">
         <ul>
             <li><a href="index.html" class="active" id="home">Home</a></li>
@@ -27,6 +29,7 @@
             <li><a href="contact.html" id="contact">Contact</a></li>
             <li><a href="#" id="login">Login</a></li>
             <li><a href="#" id="leaderboard">Leaderboard</a></li>
+            <!--Give the user the options to select the theme to dark or light-->
             <select id="themeSelect">
                 <option value="light">Light Theme</option>
                 <option value="dark">Dark Theme</option>
@@ -34,14 +37,29 @@
         </ul>
     </nav>
 
-
+    <!--Game description for the user to read before the game starts-->
     <section class="description-section">
-        <!-- <h2> X and O Game (Tic-Tac-Toe)</h2> -->
-        <h2>Welcome to the X and O Showdown against the Computer Challenge!</h2>
+        <h2>The X and O Showdown against the Computer Challenge!</h2>
         <p>Prepare for an epic showdown in the classic game of X and O, also known as Tic-Tac-Toe.
             Challenge a friend to a strategic duel, taking turns to mark the grid with your X or O.
-            Be the first to complete a row, column, or diagonal to claim victory!Ready to prove your tactical
-            skills? Let's get started!
+            Be the first to complete a row, column, or diagonal to claim victory! Ready to prove your tactical
+            skills?
+            Let's get started!</b>Check the description of how the game works:</p>
+
+        <!--Order and unordered list-->
+        <ol>
+            <li>The game is played on a 3x3 grid.</li>
+            <li>Two players are involved, one being the human player and the other being the computer.</li>
+            <li>The human player uses "X," while the computer uses "O."</li>
+            <li>Players take turns placing their symbol in an empty grid cell.</li>
+            <ul>The human player starts.</ul>
+            <li>The goal for both the human player and the computer is to be the first to form a row, column, or
+                diagonal with three of their symbols.</li>
+            <ul>This can be done horizontally, vertically, or diagonally.</ul>
+            <li>The game ends when one of the following occurs:</li>
+            <ul>The human player or computer successfully creates a winning combination.</ul>
+            <ul>All cells are filled, resulting in a draw.</ul>
+        </ol>
     </section>
 
     <div class="game">
@@ -55,11 +73,23 @@
             <div class="square" onclick="makeMove(this)" data-index="6"></div>
             <div class="square" onclick="makeMove(this)" data-index="7"></div>
             <div class="square" onclick="makeMove(this)" data-index="8"></div>
+            <!--Restart game button-->
             <button class="button" onclick="restartGame()">Restart</button>
         </div>
     </div>
 
+    <div id="result">Game in progress!!</div>
+    <!-- Back Arrow to return to the home page -->
+    <div class="back-arrow">
+        <a href="index.html">
+            <button id="home-button">
+                <span>&#129092; Home Page</span>
+            </button>
+        </a>
+    </div>
+
     <div class="count-bar">
+        <!--Game count bar-->
         <div class="win-count">
             <span>PLAYER (X)</span>
             <span id="player-count">0</span>
