@@ -377,13 +377,14 @@ h3 {
 /* Tic Tac Toe game styles*/
 /* Game description */
 .description-section {
-    max-width: 1020px;
+    max-width: 760px;
     /* Adjust this value to make the box wider */
     margin: 0 auto;
     padding: 20px;
     background-color: #d0cccc;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
 }
 
 .description-section h2 {
@@ -443,11 +444,11 @@ h3 {
 /* Style the individual squares within the game board */
 .square {
     width: 100px;
-    height: 100px;
+    height: 120px;
     text-align: center;
     font-size: 60px;
     /* Vertically center the text content within the square */
-    line-height: 100px;
+    line-height: 120px;
     cursor: pointer;
     background-color: #fff;
     border: 1px solid #444;
@@ -465,7 +466,7 @@ h3 {
 /* Style the restart button */
 .game .board button {
     position: absolute;
-    top: 360px;
+    top: 420px;
     left: 140px;
     width: 100px;
     height: 30px;
@@ -594,8 +595,7 @@ span {
 
 /* CONTACT PAGE */
 /* contact styles */
-.about-section,
-.description-section {
+.about-section {
     max-width: 760px;
     margin: 0 auto;
     padding: 20px;
@@ -605,13 +605,11 @@ span {
     margin-bottom: 30px;
 }
 
-.about-section h2,
-.description-section h2 {
+.about-section h2 {
     color: #333;
 }
 
-.about-section p,
-.description-section p {
+.about-section p {
     font-size: 16px;
     line-height: 1.6;
     color: #555;
